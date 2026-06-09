@@ -44,85 +44,45 @@
     }
     .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.5px; }
     .logo span { color: var(--accent); }
-    .stats-bar {
-      display: flex;
-      gap: 24px;
-    }
-    .stat {
-      text-align: center;
-    }
+    .stats-bar { display: flex; gap: 24px; }
+    .stat { text-align: center; }
     .stat-val {
-      font-size: 1.1rem;
-      font-weight: 700;
-      font-family: var(--mono);
-      color: var(--accent2);
+      font-size: 1.1rem; font-weight: 700;
+      font-family: var(--mono); color: var(--accent2);
     }
     .stat-label {
-      font-size: 0.65rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 0.65rem; color: var(--muted);
+      text-transform: uppercase; letter-spacing: 1px;
     }
 
     /* ── Layout ── */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 28px 24px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 28px 24px; }
 
     /* ── Toolbar ── */
     .toolbar {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-      align-items: center;
+      display: flex; gap: 12px; margin-bottom: 20px;
+      flex-wrap: wrap; align-items: center;
     }
-    .search-wrap {
-      position: relative;
-      flex: 1;
-      min-width: 200px;
-    }
+    .search-wrap { position: relative; flex: 1; min-width: 200px; }
     .search-wrap svg {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--muted);
-      pointer-events: none;
+      position: absolute; left: 12px; top: 50%;
+      transform: translateY(-50%); color: var(--muted); pointer-events: none;
     }
     input[type="text"], input[type="number"], select {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-family: var(--font);
-      font-size: 0.9rem;
-      border-radius: 8px;
-      padding: 10px 14px;
-      outline: none;
-      transition: border-color .2s;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); font-family: var(--font); font-size: 0.9rem;
+      border-radius: 8px; padding: 10px 14px; outline: none; transition: border-color .2s;
     }
-    input[type="text"]:focus, input[type="number"]:focus, select:focus {
-      border-color: var(--accent);
-    }
+    input[type="text"]:focus, input[type="number"]:focus, select:focus { border-color: var(--accent); }
     #searchInput { padding-left: 38px; width: 100%; }
     select { cursor: pointer; }
     select option { background: var(--surface); }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 8px;
-      font-family: var(--font);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: opacity .15s, transform .1s;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 10px 18px; border: none; border-radius: 8px;
+      font-family: var(--font); font-size: 0.88rem; font-weight: 600;
+      cursor: pointer; transition: opacity .15s, transform .1s; white-space: nowrap;
     }
     .btn:hover { opacity: 0.88; }
     .btn:active { transform: scale(0.97); }
@@ -130,205 +90,112 @@
     .btn-scan    { background: var(--accent2); color: #0f1117; }
     .btn-danger  { background: var(--danger); color: #fff; }
     .btn-ghost   { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .btn-warn    { background: transparent; color: var(--warn); border: 1px solid var(--warn); }
     .btn-sm      { padding: 6px 12px; font-size: 0.8rem; }
 
     /* ── Add / Edit Form ── */
     .form-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 20px;
-      display: none;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px; margin-bottom: 20px; display: none;
     }
     .form-card.visible { display: block; }
-    .form-card h3 {
-      margin-bottom: 16px;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
-    }
+    .form-card h3 { margin-bottom: 16px; font-size: 1rem; font-weight: 600; }
+    .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
     .form-group { display: flex; flex-direction: column; gap: 5px; }
     .form-group label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--muted);
+      font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.8px; color: var(--muted);
     }
     .form-group input, .form-group select { width: 100%; }
-    .form-actions {
-      display: flex;
-      gap: 10px;
-      margin-top: 14px;
-      justify-content: flex-end;
-    }
+    .form-actions { display: flex; gap: 10px; margin-top: 14px; justify-content: flex-end; }
 
-    /* ── Barcode Modal ── */
+    /* ── Category Manager Modal ── */
     .modal-overlay {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,.75);
-      display: flex; align-items: center; justify-content: center;
-      z-index: 200;
-      display: none;
+      position: fixed; inset: 0; background: rgba(0,0,0,.75);
+      align-items: center; justify-content: center; z-index: 200; display: none;
     }
     .modal-overlay.open { display: flex; }
     .modal {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      width: min(480px, 95vw);
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 16px; padding: 28px; width: min(480px, 95vw);
     }
     .modal h3 { margin-bottom: 6px; font-size: 1.1rem; }
     .modal p  { color: var(--muted); font-size: 0.85rem; margin-bottom: 16px; }
-    #scannerVideo {
-      width: 100%; border-radius: 10px;
-      aspect-ratio: 4/3; object-fit: cover;
-      background: #000;
-      display: none;
-    }
-    #scannerCanvas { display: none; }
-    .scan-result {
-      margin-top: 12px;
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      color: var(--accent2);
-      min-height: 22px;
-    }
-    .scan-manual {
-      margin-top: 14px;
-      display: flex;
-      gap: 10px;
-    }
-    .scan-manual input { flex: 1; }
 
-    /* Scanner corner guides */
-    .scan-corner {
-      position: absolute;
-      width: 22px; height: 22px;
-      border-color: var(--accent2);
-      border-style: solid;
-      z-index: 11;
+    /* Category list */
+    .cat-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; max-height: 260px; overflow-y: auto; }
+    .cat-item {
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 8px 12px;
     }
+    .cat-item .cat-name { flex: 1; font-size: 0.9rem; }
+    .cat-item input.cat-edit {
+      flex: 1; padding: 4px 8px; font-size: 0.88rem;
+      display: none; border-radius: 6px;
+    }
+    .cat-item.editing .cat-name { display: none; }
+    .cat-item.editing input.cat-edit { display: block; }
+    .cat-add-row { display: flex; gap: 8px; }
+    .cat-add-row input { flex: 1; }
+    .modal-footer { margin-top: 18px; display: flex; justify-content: flex-end; gap: 10px; }
+
+    /* ── Barcode Modal ── */
+    #scannerVideo { width: 100%; border-radius: 10px; aspect-ratio: 4/3; object-fit: cover; background: #000; display: none; }
+    #scannerCanvas { display: none; }
+    .scan-result { margin-top: 12px; font-family: var(--mono); font-size: 0.9rem; color: var(--accent2); min-height: 22px; }
+    .scan-manual { margin-top: 14px; display: flex; gap: 10px; }
+    .scan-manual input { flex: 1; }
+    .scan-corner { position: absolute; width: 22px; height: 22px; border-color: var(--accent2); border-style: solid; z-index: 11; }
     .scan-corner.tl { top: 10px; left: 10px; border-width: 3px 0 0 3px; border-radius: 3px 0 0 0; }
     .scan-corner.tr { top: 10px; right: 10px; border-width: 3px 3px 0 0; border-radius: 0 3px 0 0; }
     .scan-corner.bl { bottom: 10px; left: 10px; border-width: 0 0 3px 3px; border-radius: 0 0 0 3px; }
     .scan-corner.br { bottom: 10px; right: 10px; border-width: 0 3px 3px 0; border-radius: 0 0 3px 0; }
-
-    /* Quagga inner canvas/video sizing */
-    #quagga-viewport video,
-    #quagga-viewport canvas {
-      width: 100% !important;
-      height: auto !important;
-      display: block !important;
-    }
-    #quagga-viewport canvas.drawingBuffer {
-      position: absolute !important;
-      top: 0; left: 0;
-      opacity: 0.4;
-    }
-
-    @keyframes laser {
-      0%, 100% { top: 30%; }
-      50%       { top: 70%; }
-    }
-    .modal-footer {
-      margin-top: 18px;
-      display: flex;
-      justify-content: flex-end;
-      gap: 10px;
-    }
+    #quagga-viewport video, #quagga-viewport canvas { width: 100% !important; height: auto !important; display: block !important; }
+    #quagga-viewport canvas.drawingBuffer { position: absolute !important; top: 0; left: 0; opacity: 0.4; }
+    @keyframes laser { 0%, 100% { top: 30%; } 50% { top: 70%; } }
 
     /* ── Table ── */
-    .table-wrap {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
+    .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
     table { width: 100%; border-collapse: collapse; }
     thead th {
-      padding: 12px 16px;
-      text-align: left;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.9px;
-      color: var(--muted);
-      border-bottom: 1px solid var(--border);
-      background: rgba(255,255,255,.02);
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
+      padding: 12px 16px; text-align: left; font-size: 0.72rem;
+      text-transform: uppercase; letter-spacing: 0.9px; color: var(--muted);
+      border-bottom: 1px solid var(--border); background: rgba(255,255,255,.02);
+      cursor: pointer; user-select: none; white-space: nowrap;
     }
     thead th:hover { color: var(--text); }
     thead th.sorted { color: var(--accent2); }
-    tbody tr {
-      border-bottom: 1px solid var(--border);
-      transition: background .12s;
-    }
+    tbody tr { border-bottom: 1px solid var(--border); transition: background .12s; }
     tbody tr:last-child { border-bottom: none; }
     tbody tr:hover { background: rgba(255,255,255,.03); }
-    td {
-      padding: 12px 16px;
-      font-size: 0.88rem;
-      vertical-align: middle;
-    }
-    td.barcode {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-    .badge {
-      display: inline-block;
-      padding: 3px 10px;
-      border-radius: 99px;
-      font-size: 0.73rem;
-      font-weight: 600;
-      background: rgba(108,99,255,.18);
-      color: var(--accent);
-    }
-    .badge.food    { background: rgba(0,212,170,.15); color: var(--accent2); }
-    .badge.elec    { background: rgba(245,166,35,.15); color: var(--warn); }
-    .badge.clothing{ background: rgba(255,79,106,.15); color: var(--danger); }
-    .badge.other   { background: rgba(107,114,128,.15); color: var(--muted); }
-
+    td { padding: 12px 16px; font-size: 0.88rem; vertical-align: middle; }
+    td.barcode { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 99px; font-size: 0.73rem; font-weight: 600; background: rgba(108,99,255,.18); color: var(--accent); }
+    .badge.food     { background: rgba(0,212,170,.15); color: var(--accent2); }
+    .badge.elec     { background: rgba(245,166,35,.15); color: var(--warn); }
+    .badge.clothing { background: rgba(255,79,106,.15); color: var(--danger); }
+    .badge.other    { background: rgba(107,114,128,.15); color: var(--muted); }
     .qty { font-family: var(--mono); font-weight: 600; }
     .qty.low { color: var(--danger); }
     .price { font-family: var(--mono); }
-
     .row-actions { display: flex; gap: 6px; }
-
-    .empty-state {
-      padding: 60px 20px;
-      text-align: center;
-      color: var(--muted);
-    }
+    .empty-state { padding: 60px 20px; text-align: center; color: var(--muted); }
     .empty-state svg { opacity: .3; margin-bottom: 10px; }
     .empty-state p { font-size: 0.9rem; }
 
     /* ── Toast ── */
     #toast {
       position: fixed; bottom: 28px; right: 28px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent2);
-      border-radius: 8px;
-      padding: 12px 18px;
-      font-size: 0.88rem;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all .25s;
-      z-index: 999;
-      pointer-events: none;
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 4px solid var(--accent2); border-radius: 8px;
+      padding: 12px 18px; font-size: 0.88rem;
+      opacity: 0; transform: translateY(10px);
+      transition: all .25s; z-index: 999; pointer-events: none;
     }
     #toast.show { opacity: 1; transform: translateY(0); }
     #toast.error { border-left-color: var(--danger); }
 
-    /* ── Responsive ── */
     @media (max-width: 600px) {
       header { padding: 12px 16px; flex-wrap: wrap; gap: 10px; }
       .stats-bar { gap: 14px; }
@@ -357,17 +224,12 @@
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
       <input type="text" id="searchInput" placeholder="Search by name, barcode, or category…">
     </div>
-    <select id="filterCat">
-      <option value="">All Categories</option>
-      <option value="Food">Food</option>
-      <option value="Electronics">Electronics</option>
-      <option value="Clothing">Clothing</option>
-      <option value="Other">Other</option>
-    </select>
+    <select id="filterCat"></select>
     <button class="btn btn-scan" onclick="openScanner()">
       <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M3 9V6a2 2 0 0 1 2-2h2M15 4h2a2 2 0 0 1 2 2v3M21 15v3a2 2 0 0 1-2 2h-2M9 20H6a2 2 0 0 1-2-2v-3"/><rect x="7" y="7" width="10" height="10" rx="1"/></svg>
       Scan Barcode
     </button>
+    <button class="btn btn-ghost" onclick="openCategoryManager()">⚙ Categories</button>
     <button class="btn btn-primary" onclick="toggleForm()">
       <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
       Add Item
@@ -388,12 +250,7 @@
       </div>
       <div class="form-group">
         <label>Category</label>
-        <select id="fCategory">
-          <option>Food</option>
-          <option>Electronics</option>
-          <option>Clothing</option>
-          <option>Other</option>
-        </select>
+        <select id="fCategory"></select>
       </div>
       <div class="form-group">
         <label>Price (₱)</label>
@@ -432,32 +289,33 @@
   </div>
 </div>
 
+<!-- Category Manager Modal -->
+<div class="modal-overlay" id="categoryModal">
+  <div class="modal">
+    <h3>⚙ Manage Categories</h3>
+    <p>Add, rename, or delete categories. Changes apply to all items.</p>
+    <div class="cat-list" id="catList"></div>
+    <div class="cat-add-row">
+      <input type="text" id="newCatInput" placeholder="New category name…">
+      <button class="btn btn-primary btn-sm" onclick="addCategory()">+ Add</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-ghost btn-sm" onclick="closeCategoryManager()">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- Barcode Scanner Modal -->
 <div class="modal-overlay" id="scannerModal">
   <div class="modal">
     <h3>📷 Barcode Scanner</h3>
     <p id="scannerSubtitle">Point your camera at a barcode — it will detect automatically.</p>
-
-    <!-- Quagga live scanner viewport -->
     <div id="quagga-viewport" style="position:relative;width:100%;border-radius:10px;overflow:hidden;background:#000;min-height:220px;display:none;">
-      <!-- Quagga injects a <video> and <canvas> here -->
-      <!-- Laser line overlay -->
-      <div id="scan-laser" style="
-        position:absolute;left:10%;right:10%;
-        height:2px;background:var(--accent2);
-        box-shadow:0 0 6px var(--accent2);
-        top:50%;transform:translateY(-50%);
-        z-index:10;animation:laser 1.8s ease-in-out infinite;
-      "></div>
-      <!-- Corner guides -->
-      <div class="scan-corner tl"></div>
-      <div class="scan-corner tr"></div>
-      <div class="scan-corner bl"></div>
-      <div class="scan-corner br"></div>
+      <div id="scan-laser" style="position:absolute;left:10%;right:10%;height:2px;background:var(--accent2);box-shadow:0 0 6px var(--accent2);top:50%;transform:translateY(-50%);z-index:10;animation:laser 1.8s ease-in-out infinite;"></div>
+      <div class="scan-corner tl"></div><div class="scan-corner tr"></div>
+      <div class="scan-corner bl"></div><div class="scan-corner br"></div>
     </div>
-
     <div class="scan-result" id="scanResult">Tap <strong>Start Camera</strong> to begin scanning.</div>
-
     <div class="scan-manual">
       <input type="text" id="manualBarcode" placeholder="Or type barcode manually…">
       <button class="btn btn-primary btn-sm" onclick="useManualBarcode()">Use</button>
@@ -476,23 +334,134 @@
 <script>
   // ── State ──
   let items = JSON.parse(localStorage.getItem('stockroom_items') || '[]');
+  let categories = JSON.parse(localStorage.getItem('stockroom_categories') || 'null') || ['Food', 'Electronics', 'Clothing', 'Other'];
   let editId = null;
   let sortKey = 'name';
   let sortAsc = true;
 
   // ── Helpers ──
   const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2);
-  const save = () => localStorage.setItem('stockroom_items', JSON.stringify(items));
-  const toast = (msg, type='') => {
+  const save = () => {
+    localStorage.setItem('stockroom_items', JSON.stringify(items));
+    localStorage.setItem('stockroom_categories', JSON.stringify(categories));
+  };
+  const toast = (msg, type = '') => {
     const el = document.getElementById('toast');
     el.textContent = msg;
     el.className = 'show ' + type;
     setTimeout(() => el.className = '', 2500);
   };
+  const catClass = c => ({ Food: 'food', Electronics: 'elec', Clothing: 'clothing' }[c] || 'other');
 
-  const catClass = c => ({ Food:'food', Electronics:'elec', Clothing:'clothing' }[c] || 'other');
+  // ── Populate all category dropdowns & filter bar ──
+  function renderCategories() {
+    // Form dropdown
+    const fCat = document.getElementById('fCategory');
+    const prev = fCat.value;
+    fCat.innerHTML = '';
+    categories.forEach(cat => {
+      const o = document.createElement('option');
+      o.value = o.textContent = cat;
+      fCat.appendChild(o);
+    });
+    if (categories.includes(prev)) fCat.value = prev;
 
-  // ── Render ──
+    // Filter bar dropdown
+    const fFilter = document.getElementById('filterCat');
+    const prevFilter = fFilter.value;
+    fFilter.innerHTML = '<option value="">All Categories</option>';
+    categories.forEach(cat => {
+      const o = document.createElement('option');
+      o.value = o.textContent = cat;
+      fFilter.appendChild(o);
+    });
+    if (categories.includes(prevFilter)) fFilter.value = prevFilter;
+  }
+
+  // ── Category Manager ──
+  function openCategoryManager() {
+    renderCatList();
+    document.getElementById('categoryModal').classList.add('open');
+    document.getElementById('newCatInput').value = '';
+  }
+
+  function closeCategoryManager() {
+    document.getElementById('categoryModal').classList.remove('open');
+    renderCategories();
+    render();
+  }
+
+  function renderCatList() {
+    const list = document.getElementById('catList');
+    list.innerHTML = '';
+    categories.forEach((cat, idx) => {
+      const div = document.createElement('div');
+      div.className = 'cat-item';
+      div.dataset.idx = idx;
+      div.innerHTML = `
+        <span class="cat-name">${cat}</span>
+        <input class="cat-edit" type="text" value="${cat}">
+        <button class="btn btn-ghost btn-sm" onclick="startEditCat(${idx})">✏️</button>
+        <button class="btn btn-primary btn-sm" onclick="saveEditCat(${idx})" style="display:none" id="savecat-${idx}">✔</button>
+        <button class="btn btn-danger btn-sm" onclick="deleteCategory(${idx})">🗑</button>
+      `;
+      list.appendChild(div);
+    });
+  }
+
+  function startEditCat(idx) {
+    const item = document.querySelector(`.cat-item[data-idx="${idx}"]`);
+    item.classList.add('editing');
+    item.querySelector('.cat-edit').focus();
+    document.getElementById(`savecat-${idx}`).style.display = 'inline-flex';
+  }
+
+  function saveEditCat(idx) {
+    const item = document.querySelector(`.cat-item[data-idx="${idx}"]`);
+    const newName = item.querySelector('.cat-edit').value.trim();
+    if (!newName) { toast('Category name cannot be empty.', 'error'); return; }
+    if (categories.includes(newName) && categories[idx] !== newName) {
+      toast('Category already exists.', 'error'); return;
+    }
+    const oldName = categories[idx];
+    categories[idx] = newName;
+    // Update any items using the old category name
+    items = items.map(i => i.category === oldName ? { ...i, category: newName } : i);
+    save();
+    toast(`✅ Renamed "${oldName}" → "${newName}"`);
+    renderCatList();
+  }
+
+  function addCategory() {
+    const input = document.getElementById('newCatInput');
+    const name = input.value.trim();
+    if (!name) { toast('Enter a category name.', 'error'); return; }
+    if (categories.includes(name)) { toast('Category already exists.', 'error'); return; }
+    categories.push(name);
+    save();
+    input.value = '';
+    toast('✅ Category added!');
+    renderCatList();
+  }
+
+  function deleteCategory(idx) {
+    const cat = categories[idx];
+    const inUse = items.filter(i => i.category === cat).length;
+    if (inUse > 0) {
+      if (!confirm(`"${cat}" is used by ${inUse} item(s). Delete anyway? Those items will be set to "Other".`)) return;
+      items = items.map(i => i.category === cat ? { ...i, category: 'Other' } : i);
+    } else {
+      if (!confirm(`Delete category "${cat}"?`)) return;
+    }
+    categories.splice(idx, 1);
+    // Ensure "Other" always exists as fallback
+    if (!categories.includes('Other')) categories.push('Other');
+    save();
+    toast(`🗑 Category deleted.`);
+    renderCatList();
+  }
+
+  // ── Render Table ──
   function render() {
     const q = document.getElementById('searchInput').value.toLowerCase();
     const cat = document.getElementById('filterCat').value;
@@ -507,40 +476,36 @@
 
     list.sort((a, b) => {
       let av = a[sortKey], bv = b[sortKey];
-      if (typeof av === 'string') av = av.toLowerCase(), bv = bv.toLowerCase();
+      if (typeof av === 'string') { av = av.toLowerCase(); bv = bv.toLowerCase(); }
       return sortAsc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
     });
 
     const tbody = document.getElementById('tableBody');
     tbody.innerHTML = '';
 
-    if (!list.length) {
-      document.getElementById('emptyState').style.display = 'block';
-    } else {
-      document.getElementById('emptyState').style.display = 'none';
-      list.forEach(item => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td><strong>${item.name}</strong></td>
-          <td class="barcode">${item.barcode || '—'}</td>
-          <td><span class="badge ${catClass(item.category)}">${item.category}</span></td>
-          <td class="price">₱${parseFloat(item.price).toFixed(2)}</td>
-          <td class="qty ${item.qty <= 5 ? 'low' : ''}">${item.qty}${item.qty <= 5 ? ' ⚠' : ''}</td>
-          <td>
-            <div class="row-actions">
-              <button class="btn btn-ghost btn-sm" onclick="editItem('${item.id}')">✏️ Edit</button>
-              <button class="btn btn-danger btn-sm" onclick="deleteItem('${item.id}')">🗑 Delete</button>
-            </div>
-          </td>
-        `;
-        tbody.appendChild(tr);
-      });
-    }
+    document.getElementById('emptyState').style.display = list.length ? 'none' : 'block';
 
-    // Stats
+    list.forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${item.name}</strong></td>
+        <td class="barcode">${item.barcode || '—'}</td>
+        <td><span class="badge ${catClass(item.category)}">${item.category}</span></td>
+        <td class="price">₱${parseFloat(item.price).toFixed(2)}</td>
+        <td class="qty ${item.qty <= 5 ? 'low' : ''}">${item.qty}${item.qty <= 5 ? ' ⚠' : ''}</td>
+        <td>
+          <div class="row-actions">
+            <button class="btn btn-ghost btn-sm" onclick="editItem('${item.id}')">✏️ Edit</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteItem('${item.id}')">🗑 Delete</button>
+          </div>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+
     document.getElementById('statTotal').textContent = items.length;
     const totalVal = items.reduce((s, i) => s + (parseFloat(i.price) * parseInt(i.qty)), 0);
-    document.getElementById('statValue').textContent = '₱' + totalVal.toLocaleString('en-PH', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    document.getElementById('statValue').textContent = '₱' + totalVal.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     document.getElementById('statLow').textContent = items.filter(i => i.qty <= 5).length;
   }
 
@@ -552,20 +517,18 @@
     render();
   }
 
-  // ── Form ──
+  // ── Item Form ──
   function toggleForm(prefill = null) {
     const card = document.getElementById('formCard');
     if (card.classList.contains('visible') && !prefill) {
       card.classList.remove('visible');
-      clearForm();
-      editId = null;
-      return;
+      clearForm(); editId = null; return;
     }
     card.classList.add('visible');
     if (prefill) {
       document.getElementById('fName').value = prefill.name || '';
       document.getElementById('fBarcode').value = prefill.barcode || '';
-      document.getElementById('fCategory').value = prefill.category || 'Other';
+      document.getElementById('fCategory').value = prefill.category || categories[0];
       document.getElementById('fPrice').value = prefill.price || '';
       document.getElementById('fQty').value = prefill.qty || '';
       document.getElementById('formTitle').textContent = '✏️ Edit Item';
@@ -576,16 +539,16 @@
   }
 
   function clearForm() {
-    ['fName','fBarcode','fPrice','fQty'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('fCategory').value = 'Food';
+    ['fName', 'fBarcode', 'fPrice', 'fQty'].forEach(id => document.getElementById(id).value = '');
+    if (categories.length) document.getElementById('fCategory').value = categories[0];
   }
 
   function saveItem() {
-    const name = document.getElementById('fName').value.trim();
-    const barcode = document.getElementById('fBarcode').value.trim();
+    const name     = document.getElementById('fName').value.trim();
+    const barcode  = document.getElementById('fBarcode').value.trim();
     const category = document.getElementById('fCategory').value;
-    const price = parseFloat(document.getElementById('fPrice').value) || 0;
-    const qty = parseInt(document.getElementById('fQty').value) || 0;
+    const price    = parseFloat(document.getElementById('fPrice').value) || 0;
+    const qty      = parseInt(document.getElementById('fQty').value) || 0;
 
     if (!name) { toast('Item name is required.', 'error'); return; }
 
@@ -614,8 +577,7 @@
     if (!item) return;
     if (!confirm(`Delete "${item.name}"?`)) return;
     items = items.filter(i => i.id !== id);
-    save();
-    render();
+    save(); render();
     toast('🗑 Item deleted.', 'error');
   }
 
@@ -639,106 +601,62 @@
     const viewport = document.getElementById('quagga-viewport');
     const btn = document.getElementById('startCamBtn');
     const result = document.getElementById('scanResult');
-
-    // If already running, stop it
-    if (quaggaRunning) {
-      stopQuagga();
-      return;
-    }
-
+    if (quaggaRunning) { stopQuagga(); return; }
     viewport.style.display = 'block';
     btn.textContent = '⏹ Stop Camera';
     result.textContent = '🔍 Scanning… hold barcode steady in the frame.';
 
     Quagga.init({
       inputStream: {
-        name: 'Live',
-        type: 'LiveStream',
-        target: viewport,
-        constraints: {
-          facingMode: 'environment',  // rear camera on mobile
-          width: { ideal: 1280 },
-          height: { ideal: 720 }
-        }
+        name: 'Live', type: 'LiveStream', target: viewport,
+        constraints: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 720 } }
       },
       decoder: {
-        readers: [
-          'ean_reader',        // EAN-13 (most retail barcodes)
-          'ean_8_reader',      // EAN-8
-          'upc_reader',        // UPC-A
-          'upc_e_reader',      // UPC-E
-          'code_128_reader',   // Code 128
-          'code_39_reader',    // Code 39
-          'i2of5_reader',      // Interleaved 2 of 5
-        ]
+        readers: ['ean_reader','ean_8_reader','upc_reader','upc_e_reader','code_128_reader','code_39_reader','i2of5_reader']
       },
       locate: true,
       numOfWorkers: navigator.hardwareConcurrency || 2,
     }, function(err) {
       if (err) {
-        console.error(err);
-        viewport.style.display = 'none';
-        btn.textContent = '▶ Start Camera';
+        viewport.style.display = 'none'; btn.textContent = '▶ Start Camera';
         let msg = '❌ Could not start camera.';
-        if (err.name === 'NotAllowedError' || (err.message && err.message.includes('permission'))) {
-          msg = '❌ Camera permission denied. Please allow camera access and try again.';
-        } else if (err.name === 'NotFoundError') {
-          msg = '❌ No camera found on this device.';
-        }
-        result.textContent = msg;
-        return;
+        if (err.name === 'NotAllowedError') msg = '❌ Camera permission denied. Please allow camera access and try again.';
+        else if (err.name === 'NotFoundError') msg = '❌ No camera found on this device.';
+        result.textContent = msg; return;
       }
-      Quagga.start();
-      quaggaRunning = true;
+      Quagga.start(); quaggaRunning = true;
     });
 
     Quagga.onDetected(function(data) {
       const code = data.codeResult.code;
       const now = Date.now();
-      // Debounce: ignore same code within 2 seconds
       if (code === lastScan && now - lastScanTime < 2000) return;
-      lastScan = code;
-      lastScanTime = now;
-
-      // Flash feedback
+      lastScan = code; lastScanTime = now;
       const result = document.getElementById('scanResult');
       result.innerHTML = `✅ Scanned: <strong>${code}</strong>`;
       viewport.style.boxShadow = '0 0 0 3px var(--accent2)';
       setTimeout(() => { viewport.style.boxShadow = ''; }, 400);
-
-      // Short beep
       try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
+        const osc = ctx.createOscillator(); const gain = ctx.createGain();
         osc.connect(gain); gain.connect(ctx.destination);
         osc.frequency.value = 1200;
         gain.gain.setValueAtTime(0.3, ctx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.12);
         osc.start(); osc.stop(ctx.currentTime + 0.12);
       } catch(e) {}
-
-      setTimeout(() => {
-        stopQuagga();
-        applyBarcode(code);
-      }, 500);
+      setTimeout(() => { stopQuagga(); applyBarcode(code); }, 500);
     });
   }
 
   function stopQuagga() {
-    if (quaggaRunning) {
-      Quagga.stop();
-      quaggaRunning = false;
-    }
+    if (quaggaRunning) { Quagga.stop(); quaggaRunning = false; }
     const viewport = document.getElementById('quagga-viewport');
     viewport.style.display = 'none';
     viewport.innerHTML = `
       <div id="scan-laser" style="position:absolute;left:10%;right:10%;height:2px;background:var(--accent2);box-shadow:0 0 6px var(--accent2);top:50%;transform:translateY(-50%);z-index:10;animation:laser 1.8s ease-in-out infinite;"></div>
-      <div class="scan-corner tl"></div>
-      <div class="scan-corner tr"></div>
-      <div class="scan-corner bl"></div>
-      <div class="scan-corner br"></div>
-    `;
+      <div class="scan-corner tl"></div><div class="scan-corner tr"></div>
+      <div class="scan-corner bl"></div><div class="scan-corner br"></div>`;
     const btn = document.getElementById('startCamBtn');
     if (btn) { btn.textContent = '▶ Start Camera'; btn.disabled = false; }
   }
@@ -752,33 +670,29 @@
   function applyBarcode(code) {
     closeScanner();
     const existing = items.find(i => i.barcode === code);
-    if (existing) {
-      toast(`Found: ${existing.name}`);
-      editItem(existing.id);
-    } else {
-      toast(`Barcode ${code} — fill in the item details.`);
-      toggleForm();
-      document.getElementById('fBarcode').value = code;
-    }
+    if (existing) { toast(`Found: ${existing.name}`); editItem(existing.id); }
+    else { toast(`Barcode ${code} — fill in the item details.`); toggleForm(); document.getElementById('fBarcode').value = code; }
   }
 
   // ── Events ──
   document.getElementById('searchInput').addEventListener('input', render);
   document.getElementById('filterCat').addEventListener('change', render);
-
-  // Keyboard shortcut: N = new item
   document.addEventListener('keydown', e => {
-    if (e.key === 'n' && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) {
-      toggleForm();
-    }
+    if (e.key === 'n' && !['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)) toggleForm();
     if (e.key === 'Escape') {
       closeScanner();
+      closeCategoryManager();
       const card = document.getElementById('formCard');
       if (card.classList.contains('visible')) toggleForm();
     }
   });
+  // Allow Enter key in new category input
+  document.getElementById('newCatInput')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') addCategory();
+  });
 
   // ── Init ──
+  renderCategories();
   render();
 </script>
 </body>
